@@ -28,6 +28,10 @@ header nav{
     float: left;
 }
 
+#logo a{
+    text-decoration: none;
+}
+
 ul{
     padding-top: 30px;
     margin: 0
@@ -40,13 +44,14 @@ header ul li{
 
 header ul li a{
     text-decoration: none;
-    color: #d2cece;
+    color: white;
     font-size: 18px;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 header ul li a:hover{
-    color: white;
+    color: #d2cece;
 }
 
 header .menu{
@@ -84,6 +89,9 @@ section button{
     color: white;
     font-size: 18px;
 }
+section button:hover{
+    font-weight: bold;
+}
 
 #welcome{
     padding-top: 180px;
@@ -106,6 +114,95 @@ section button{
 #photo{
     width: 100%;
     height: 100%;
+}
+
+/*Sign up*/
+
+.signup{
+    background: linear-gradient(rgba(23, 2, 143, 0.9), rgba(36, 2, 139, 0.9));
+    background-size: cover;
+    position: absolute;
+    color: white;
+    width: 100%;
+    left: 0;
+    top: 74px;
+    min-height: 89%;
+}
+
+#signUpForm{
+    position: absolute;
+    right: 450px;
+    top: 40px;
+    width: 30%;
+    background: white;
+    border-radius: 8px;
+}
+#signUpForm h2{
+    background-color: #061161;
+    margin-top:0;
+    padding: 10px;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 25px;
+}
+
+#signUpForm .inputBox{
+    position: relative;
+}
+
+#signUpForm .inputBox input{
+    width: 80%;
+    margin-left: 10px;
+    margin-top: 15px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Rasa', serif;
+    color: #061161;
+    margin-bottom: 7px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #bfc0c4;
+    background-color: transparent;
+    
+   }
+
+   #signUpForm .inputBox label{
+    position: absolute;
+    left: 10px;
+    top: 0;
+    padding: 15px 0;
+    font-size: 20px;
+    color: #061161;
+    pointer-events: none;
+    transition: .6s;
+}
+
+#signUpForm .inputBox input:focus ~ label,
+#signUpForm .inputBox input:valid ~ label
+
+{
+    top: -12px;
+    left: 10px;
+    font-size: 14px;
+}
+
+#signUpForm input[type="submit"]{
+    background: #061161;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #fff;
+    width: 100%;
+    outline: none;
+}
+
+#signUpForm input[type="submit"]:hover{
+    background-color: rgb(47, 47, 206);
 }
 
 /*Media queries*/
