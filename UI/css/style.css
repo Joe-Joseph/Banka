@@ -1,0 +1,102 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-weight: 1.5
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header{
+    background-image: linear-gradient(-90deg, #061161, #780206);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+header h1{
+    color: white
+}
+header nav{
+    float: right;
+}
+
+#logo{
+    float: left;
+}
+
+ul{
+    padding-top: 30px;
+    margin: 0
+}
+
+header ul li{
+    display: inline;
+    padding: 0 10px 0 10px
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #d2cece;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+header ul li a:hover{
+    color: white;
+}
+
+.intro{
+    background-color: #061161;
+    width: 60%;
+    top: 74px;
+    position: fixed;
+    left: 0px;
+    color: white;
+    bottom: 0px;
+}
+
+.intro p{
+    font-size: 18px;
+    padding-bottom: 20px;
+    line-height: 1.5;
+}
+section button{
+    background-color: #600518;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+}
+
+#welcome{
+    padding-top: 180px;
+    padding-left: 30px
+}
+
+.right-side{
+    width: 40%;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    top:74px;
+}
+
+.right-side img{
+    width: 100%;
+    height: 100%;
+}
+
+#photo{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
