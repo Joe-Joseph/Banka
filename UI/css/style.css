@@ -58,11 +58,11 @@ header .menu{
     display: none;
 }
 
-header .close{
+.close{
     display: none;
 }
 
-header .navbar{
+.navbar{
     display: none;
 }
 
@@ -88,6 +88,7 @@ section button{
     border-radius: 5px;
     color: white;
     font-size: 18px;
+    outline: none
 }
 section button:hover{
     font-weight: bold;
@@ -192,16 +193,111 @@ section button:hover{
     font-size: 18px;
     text-align: center;
     border: none;
+    border-radius: 3px;
     margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
     padding: 10px 20px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     color: #fff;
-    width: 100%;
+    width: 95%;
     outline: none;
 }
 
 #signUpForm input[type="submit"]:hover{
+    background-color: rgb(47, 47, 206);
+}
+
+/*Sign in page*/
+
+.signin{
+    background: linear-gradient(rgba(23, 2, 143, 0.9), rgba(36, 2, 139, 0.9));
+    background-size: cover;
+    position: absolute;
+    color: white;
+    width: 100%;
+    left: 0;
+    top: 74px;
+    min-height: 89%;
+}
+
+#signInForm{
+    position: absolute;
+    right: 450px;
+    top: 40px;
+    width: 30%;
+    background: white;
+    border-radius: 8px;
+}
+#signInForm h2{
+    background-color: #061161;
+    margin-top:0;
+    padding: 10px;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 25px;
+}
+
+#signInForm .inputBox{
+    position: relative;
+}
+
+#signInForm .inputBox input{
+    width: 80%;
+    margin-left: 10px;
+    margin-top: 15px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Rasa', serif;
+    color: #061161;
+    margin-bottom: 7px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #bfc0c4;
+    background-color: transparent;
+    
+   }
+
+   #signInForm .inputBox label{
+    position: absolute;
+    left: 10px;
+    top: 0;
+    padding: 15px 0;
+    font-size: 20px;
+    color: #061161;
+    pointer-events: none;
+    transition: .6s;
+}
+
+#signInForm .inputBox input:focus ~ label,
+#signInForm .inputBox input:valid ~ label
+
+{
+    top: -12px;
+    left: 10px;
+    font-size: 14px;
+}
+
+#signInForm input[type="submit"]{
+    background: #061161;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #fff;
+    width: 95%;
+    outline: none;
+}
+
+#signInForm input[type="submit"]:hover{
     background-color: rgb(47, 47, 206);
 }
 
@@ -248,7 +344,6 @@ section button:hover{
         top: 0;
         right: 0;
         bottom: 0;
-        box-shadow: 0px 0px 8px 2px #061161;
        transform: translateX(100%);
         -webkit-transform: translateX(100%);
         -webkit-transition: transform 0.6s ease;
@@ -286,6 +381,34 @@ section button:hover{
         padding-bottom: 5px;
         color: white
         
+    }
+
+    /*Sign-up page*/
+    #signUpForm{
+        position: absolute;
+        right: 0;
+        left: 0;
+        width: 100%;
+        top:0;
+        bottom: 0
+    }
+    .signup{
+        min-height: 88%;
+        overflow: hidden;
+    }
+
+    /*Sign-in page*/
+    #signInForm{
+        position: absolute;
+        right: 0;
+        left: 0;
+        width: 100%;
+        top:0;
+        bottom: 0
+    }
+    .signin{
+        min-height: 88%;
+        overflow: hidden;
     }
 
 }
