@@ -16,6 +16,7 @@ header{
     left: 0px;
     top: 0px;
     width: 100%;
+    z-index: 2;
 }
 header h1{
     color: white
@@ -130,7 +131,7 @@ section button:hover{
     min-height: 89%;
 }
 
-#allForm{
+.allForm{
     position: absolute;
     right: 450px;
     top: 40px;
@@ -140,7 +141,7 @@ section button:hover{
     border: 0;
     box-shadow: none !important
 }
-#allForm h2{
+.allForm h2{
     background-color: #061161;
     margin-top:0;
     padding: 10px;
@@ -151,11 +152,11 @@ section button:hover{
     font-size: 25px;
 }
 
-#allForm .inputBox{
+.allForm .inputBox{
     position: relative;
 }
 
-#allForm .inputBox input{
+.allForm .inputBox input{
     width: 80%;
     margin-left: 30px;
     margin-top: 15px;
@@ -172,7 +173,7 @@ section button:hover{
     
    }
 
-#allForm .inputBox select{
+.allForm .inputBox select{
     width: 89%;
     margin-left: 30px;
     margin-top: 15px;
@@ -188,7 +189,7 @@ section button:hover{
     background-color: transparent;
    }  
 
-#allForm .inputBox label{
+.allForm .inputBox label{
     position: absolute;
     left: 30px;
     top: 0;
@@ -199,8 +200,8 @@ section button:hover{
     transition: .6s;
 }
 
-#allForm .inputBox input:focus ~ label,
-#allForm .inputBox input:valid ~ label
+.allForm .inputBox input:focus ~ label,
+.allForm .inputBox input:valid ~ label
 
 {
     top: -12px;
@@ -208,8 +209,8 @@ section button:hover{
     font-size: 14px;
 }
 
-#allForm input[type="submit"]{
-    background: #061161;
+.allForm input[type="submit"]{
+    background: linear-gradient(-90deg, #061161, #780206);
     font-size: 18px;
     text-align: center;
     border: none;
@@ -225,7 +226,7 @@ section button:hover{
     outline: none;
 }
 
-#allForm input[type="submit"]:hover{
+.allForm input[type="submit"]:hover{
     background-color: rgb(47, 47, 206);
 }
 
@@ -240,6 +241,31 @@ section button:hover{
     left: 0;
     top: 74px;
     min-height: 89%;
+}
+
+#signin{
+    margin-top: 90px;
+}
+
+/*History transctions page*/
+/*Styling the table*/
+.table-responsive{
+    width: 76%;
+    margin-top: 10px;
+    z-index: 0;
+    margin-left: 140px;
+    box-shadow: 0 5px 15px #262fadad;
+    padding-bottom: 20px;
+}
+.table-responsive thead{
+    border-bottom: 1px solid #ddd;
+}
+table th, table td {
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
 }
 
 /*Media queries*/
@@ -325,10 +351,11 @@ section button:hover{
     }
 
     /*Sign-up page*/
-    #allForm{
+    .allForm{
         position: absolute;
         right: 0;
         left: 0;
+        border-radius: 0;
         width: 100%;
         top:0;
         bottom: 0
@@ -337,19 +364,25 @@ section button:hover{
         min-height: 88%;
         overflow: hidden;
     }
+    .allForm h2{
+        border-radius: 0;
+    }
 
     /*Sign-in page*/
-    #allForm{
-        position: absolute;
-        right: 0;
-        left: 0;
-        width: 100%;
-        top:0;
-        bottom: 0
-    }
     .signin{
         min-height: 88%;
         overflow: hidden;
+    }
+    #signin{
+        margin-top:0;
+    }
+
+    /*History transactions*/
+    .table-responsive{
+        width: 100%;
+        margin-left: 2px;
+        margin-right: 2px;
+        overflow: auto
     }
 
 }
