@@ -133,13 +133,11 @@ section button:hover{
 
 .allForm{
     position: absolute;
-    right: 450px;
+    right: 420px;
     top: 40px;
     width: 35%;
     background: white;
     border-radius: 8px;
-    border: 0;
-    box-shadow: none !important
 }
 .allForm h2{
     background-color: #061161;
@@ -157,8 +155,9 @@ section button:hover{
 }
 
 .allForm .inputBox input{
-    width: 80%;
+    width: 77%;
     margin-left: 30px;
+    margin-right: 30px;
     margin-top: 15px;
     padding: 15px 20px;
     border-radius: 5px;
@@ -174,7 +173,7 @@ section button:hover{
    }
 
 .allForm .inputBox select{
-    width: 89%;
+    width: 86%;
     margin-left: 30px;
     margin-top: 15px;
     padding: 15px 20px;
@@ -185,8 +184,7 @@ section button:hover{
     margin-bottom: 7px;
     outline: none;
     border: none;
-    border: 1px solid #bfc0c4;
-    background-color: transparent;
+    background-color: transparent
    }  
 
 .allForm .inputBox label{
@@ -268,6 +266,32 @@ table th, table td {
     text-align: center;
 }
 
+/*Profile page*/
+.profile {
+    position: absolute;
+    top: 70px;
+    left: 355px;
+    text-align: center;
+    width: 40%;
+    color: white;
+    box-shadow: 5px 5px 15px #262fadad;
+}
+
+#edit-pro-img button{
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.pro-image{
+    width: 25%;
+    margin-top: 20px;
+    margin-left: 183px;
+    margin-bottom: 20px
+}
+
+
+
 /*Media queries*/
 @media(max-width: 768px){
     .container{
@@ -278,7 +302,9 @@ table th, table td {
         width: 100%;
         position: absolute;
         z-index: 0;
-
+    }
+    header{
+        z-index: 1;
     }
     .right-side{
         display: none;
@@ -382,8 +408,19 @@ table th, table td {
         width: 100%;
         margin-left: 2px;
         margin-right: 2px;
-        overflow: auto
+        overflow: auto;
+        z-index: 0; 
     }
+
+    /*Profile page*/
+    .profile {
+        position: absolute;
+        top: 5px;
+        left: 13px;
+        text-align: center;
+        width: 95%;
+    }
+
 
 }
 
