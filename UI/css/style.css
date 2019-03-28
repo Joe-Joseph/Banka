@@ -130,35 +130,39 @@ section button:hover{
     min-height: 89%;
 }
 
-#signUpForm{
+#allForm{
     position: absolute;
     right: 450px;
     top: 40px;
-    width: 30%;
+    width: 35%;
     background: white;
     border-radius: 8px;
+    border: 0;
+    box-shadow: none !important
 }
-#signUpForm h2{
+#allForm h2{
     background-color: #061161;
     margin-top:0;
     padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     color: whitesmoke;
     text-align: center;
     font-size: 25px;
 }
 
-#signUpForm .inputBox{
+#allForm .inputBox{
     position: relative;
 }
 
-#signUpForm .inputBox input{
+#allForm .inputBox input{
     width: 80%;
-    margin-left: 10px;
+    margin-left: 30px;
     margin-top: 15px;
     padding: 15px 20px;
     border-radius: 5px;
     font-size: 18px;
-    font-family: 'Rasa', serif;
+    font-family: 'Courier New', Courier, monospace;
     color: #061161;
     margin-bottom: 7px;
     outline: none;
@@ -168,9 +172,25 @@ section button:hover{
     
    }
 
-   #signUpForm .inputBox label{
+#allForm .inputBox select{
+    width: 89%;
+    margin-left: 30px;
+    margin-top: 15px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #061161;
+    margin-bottom: 7px;
+    outline: none;
+    border: none;
+    border: 1px solid #bfc0c4;
+    background-color: transparent;
+   }  
+
+#allForm .inputBox label{
     position: absolute;
-    left: 10px;
+    left: 30px;
     top: 0;
     padding: 15px 0;
     font-size: 20px;
@@ -179,16 +199,16 @@ section button:hover{
     transition: .6s;
 }
 
-#signUpForm .inputBox input:focus ~ label,
-#signUpForm .inputBox input:valid ~ label
+#allForm .inputBox input:focus ~ label,
+#allForm .inputBox input:valid ~ label
 
 {
     top: -12px;
-    left: 10px;
+    left: 30px;
     font-size: 14px;
 }
 
-#signUpForm input[type="submit"]{
+#allForm input[type="submit"]{
     background: #061161;
     font-size: 18px;
     text-align: center;
@@ -205,7 +225,7 @@ section button:hover{
     outline: none;
 }
 
-#signUpForm input[type="submit"]:hover{
+#allForm input[type="submit"]:hover{
     background-color: rgb(47, 47, 206);
 }
 
@@ -220,85 +240,6 @@ section button:hover{
     left: 0;
     top: 74px;
     min-height: 89%;
-}
-
-#signInForm{
-    position: absolute;
-    right: 450px;
-    top: 40px;
-    width: 30%;
-    background: white;
-    border-radius: 8px;
-}
-#signInForm h2{
-    background-color: #061161;
-    margin-top:0;
-    padding: 10px;
-    color: whitesmoke;
-    text-align: center;
-    font-size: 25px;
-}
-
-#signInForm .inputBox{
-    position: relative;
-}
-
-#signInForm .inputBox input{
-    width: 80%;
-    margin-left: 10px;
-    margin-top: 15px;
-    padding: 15px 20px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-family: 'Rasa', serif;
-    color: #061161;
-    margin-bottom: 7px;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #bfc0c4;
-    background-color: transparent;
-    
-   }
-
-   #signInForm .inputBox label{
-    position: absolute;
-    left: 10px;
-    top: 0;
-    padding: 15px 0;
-    font-size: 20px;
-    color: #061161;
-    pointer-events: none;
-    transition: .6s;
-}
-
-#signInForm .inputBox input:focus ~ label,
-#signInForm .inputBox input:valid ~ label
-
-{
-    top: -12px;
-    left: 10px;
-    font-size: 14px;
-}
-
-#signInForm input[type="submit"]{
-    background: #061161;
-    font-size: 18px;
-    text-align: center;
-    border: none;
-    border-radius: 3px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    padding: 10px 20px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    color: #fff;
-    width: 95%;
-    outline: none;
-}
-
-#signInForm input[type="submit"]:hover{
-    background-color: rgb(47, 47, 206);
 }
 
 /*Media queries*/
@@ -384,7 +325,7 @@ section button:hover{
     }
 
     /*Sign-up page*/
-    #signUpForm{
+    #allForm{
         position: absolute;
         right: 0;
         left: 0;
@@ -398,7 +339,7 @@ section button:hover{
     }
 
     /*Sign-in page*/
-    #signInForm{
+    #allForm{
         position: absolute;
         right: 0;
         left: 0;

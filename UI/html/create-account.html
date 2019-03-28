@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Banka | Sign-in</title>
+    <title>Banka | Create account</title>
     <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
 </head>
 <body>
@@ -17,8 +17,9 @@
 
             <nav>
                 <ul>
-                    <li><a href="../html/signup.html">Signup</a></li>
-                    <li><a href="../html/signin.html">Signin</a></li>
+                    <li><a href="../html/signup.html">Profile</a></li>
+                    <li><a href="../html/signin.html">History</a></li>
+                    <li><a href="../html/create-account.html">Create account</a></li>
                 </ul>
             </nav>
 
@@ -27,39 +28,49 @@
             </div>
         </div>
     </header>
+
     <!--Side nav for the small screen-->
-    <section class="signin">
+    <section class="signup">
         <div class="navbar">
             <ul> 
                 <div class="close">X</div>
 
                     <a href="admin.html">
                         <div class="admin-nav-side">
-                            Admin 
+                            Profile 
                         </div>
                     </a>
 
                 
                     <a href="signIn.html">
                         <div class="admin-nav-side">
-                            Sign in
+                            History
                         </div>
                     </a>
                 
                 
-                    <a href="index.html">
+                    <a href="../html/create-account.html">
                         <div class="admin-nav-side">
-                            Sign up
+                            Create account
                         </div>
                     </a>
                 
                     
             </ul>
         </div>
-        <!--Login form-->
+        <!--Registration form-->
         <div id="allForm">
-            <h2>Sign in</h2>
-            <form action="inbox.html" method="POST">
+            <h2>Create account</h2>
+            <form action=".html">
+                <div class="inputBox">            
+                    <input autocomplete="off" type="text" name="firstName" required>
+                    <label for="firstName">First Name</label>
+                </div>
+                
+                <div class="inputBox">                   
+                    <input autocomplete="off" type="text" name="lastName" required>
+                    <label for="lastName">Last Name</label>
+                </div>
                 
                 <div class="inputBox">
                     <input autocomplete="off" type="email" name="email"  required>
@@ -67,11 +78,20 @@
                 </div>
                 
                 <div class="inputBox">          
-                    <input type="password" name="password" required>
-                    <label for="password">Password</label>
+                    <input autocomplete="off" type="text" name="district" required>
+                    <label for="password">District</label>
                 </div>
-                <input type="submit" name="submit" id="submitSingIn" value="Sign in to EPIC Mail">
+
+                <div class="inputBox">          
+                    <select name="">
+                        <option value="">Account type</option>
+                        <option value="">Saving</option>
+                        <option value="">Current</option>
+                    </select>
+                </div>
                 
+                
+                <input type="submit" name="submit" id="submitButton" value="Submit"></a>
             </form>
         </div>
     </section>
