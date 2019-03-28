@@ -15,13 +15,18 @@
                 <a href="../index.html"><h1>Banka</h1></a>
             </div>
 
-            <nav>
+            <nav id="pro">
                 <ul>
-                    <li><a href="../html/profile.html">Profile</a></li>
+                    <li><a class="active" href="../html/create-account.html">Create-account</a></li>
                     <li><a href="../html/history.html">History</a></li>
-                    <li><a href="../html/create-account.html">Create-account</a></li>
+                    <li><a href="../index.html">Logout</a></li>    
                 </ul>
             </nav>
+            <div class="avatar">
+                <a href="../html/profile.html">
+                    <img src="../assets/icons/man.svg" alt="Profile">
+                </a> 
+            </div>
 
             <div class="menu">
                 <img src="../assets/icons/menu.svg" alt="Menu">
@@ -54,6 +59,12 @@
                             Create-account
                         </div>
                     </a>
+
+                    <a href="../index.html">
+                        <div class="admin-nav-side">
+                            Logout
+                        </div>
+                    </a>
                 
                     
             </ul>
@@ -78,8 +89,8 @@
                 </div>
                 
                 <div class="inputBox">          
-                    <input autocomplete="off" type="text" name="district" required>
-                    <label for="password">District</label>
+                    <input autocomplete="off" type="text" name="branch" required>
+                    <label for="password">Branch</label>
                 </div>
 
                 <div class="inputBox">          

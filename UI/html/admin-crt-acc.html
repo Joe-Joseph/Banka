@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Banka | Profile</title>
+    <title>Banka | Create account</title>
     <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
 </head>
 <body>
@@ -17,8 +17,8 @@
 
             <nav id="pro">
                 <ul>
-                    <li><a href="../html/create-account.html">Create-account</a></li>
-                    <li><a href="../html/history.html">History</a></li>
+                    <li><a class="active" href="../html/create-account.html">Create-account</a></li>
+                    <li><a href="../html/admin.html">Users</a></li>
                     <li><a href="../index.html">Logout</a></li>    
                 </ul>
             </nav>
@@ -39,49 +39,52 @@
         <div class="navbar">
             <ul> 
                 <div class="close">X</div>
-
-                    <a href="../html/profile.html">
-                        <div class="admin-nav-side">
-                            Profile 
-                        </div>
-                    </a>
-
-                
-                    <a href="../html/history.html">
-                        <div class="admin-nav-side">
-                            History
-                        </div>
-                    </a>
-                
                 
                     <a href="../html/create-account.html">
                         <div class="admin-nav-side">
                             Create-account
                         </div>
                     </a>
+
                     <a href="../index.html">
                         <div class="admin-nav-side">
                             Logout
                         </div>
                     </a>
                 
+                    
             </ul>
         </div>
         <!--Registration form-->
-        <div class="profile">
-            <div class="pro-image">
-                <img src="../assets/icons/man.svg" alt="Profile">
-            </div>
-            <div id="edit-pro-img">
-                <button >Change picture</button>
-            </div>
-            
-            <div class="info">
-                <p>Name: Nkurunziza Joseph</p>
-                <p>Account number: 0056-678987-5467</p>
-                <p>Balance : 400000frw</p>
-            </div>
-            
+        <div class="allForm">
+            <h2>Create account</h2>
+            <form action=".html">
+                <div class="inputBox">            
+                    <input autocomplete="off" type="text" name="firstName" required>
+                    <label for="firstName">First Name</label>
+                </div>
+                
+                <div class="inputBox">                   
+                    <input autocomplete="off" type="text" name="lastName" required>
+                    <label for="lastName">Last Name</label>
+                </div>
+                
+                <div class="inputBox">
+                    <input autocomplete="off" type="email" name="email"  required>
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="inputBox">          
+                    <select name="">
+                        <option value="">User type</option>
+                        <option value="">Admin</option>
+                        <option value="">Staff</option>
+                    </select>
+                </div>
+                
+                
+                <input type="submit" name="submit" id="submitButton" value="Submit"></a>
+            </form>
         </div>
     </section>
     <script src="../js/index.js"></script>
