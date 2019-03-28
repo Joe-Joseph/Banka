@@ -364,9 +364,13 @@ table{
 
 .trashEmail{
     width: 20px;
-    -webkit-filter: invert(100%);
 }
 
+/*Staff page*/
+
+#staff-users{
+    margin-left: 70px;
+}
 
 /*Media queries*/
 @media(max-width: 768px){
