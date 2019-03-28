@@ -505,6 +505,18 @@ table{
         width: 95%;
     }
 
+    /*Admin page*/
+    .table-users{
+        width: 100%;
+        margin-top: 5px;
+        z-index: 0;
+        margin-left: 2px;
+        overflow: auto;
+    }
+    
+    #staff-users{
+        margin-left: 0;
+    }
     
 
 
