@@ -274,7 +274,7 @@ section button:hover{
     margin-top: 10px;
     z-index: 0;
     margin-left: 140px;
-    box-shadow: 0 5px 15px #340b3c;
+    box-shadow: 0 5px 15px #1f0e4d;
     padding-bottom: 20px;
 }
 .table-responsive thead{
@@ -321,8 +321,17 @@ table{
     margin-top: 10px;
     z-index: 0;
     margin-left: 60px;
-    box-shadow: 0 5px 15px #262fadad;
+    box-shadow: 0 5px 15px #290d46;
     padding-bottom: 20px;
+}
+
+.table-transactions{
+    width: 83%;
+    margin-top: 10px;
+    z-index: 0;
+    margin-left: 100px;
+    box-shadow: 0 5px 15px #290d46;
+    padding-bottom: 20px
 }
 
 #view-users{
@@ -330,24 +339,21 @@ table{
 }
 #operation{
     font-size: 12px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
     display: inline;
     background: #061161;
+    color: white;
 }
 
-#operationd{
-    font-size: 12px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    display: inline;
-    background: #262fadad;
-}
 #operationd:hover{
     font-weight: normal;
 }
 
-#operation:hover{
+.operation:hover{
     font-weight: normal;
 }
 
@@ -371,7 +377,7 @@ table{
 /*Staff page*/
 
 #staff-users{
-    margin-left: 70px;
+    margin-left: 20px;
 }
 
 /*Media queries*/
@@ -509,6 +515,14 @@ table{
 
     /*Admin page*/
     .table-users{
+        width: 100%;
+        margin-top: 5px;
+        z-index: 0;
+        margin-left: 2px;
+        overflow: auto;
+    }
+
+    .table-transactions{
         width: 100%;
         margin-top: 5px;
         z-index: 0;
