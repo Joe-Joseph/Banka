@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import validate from '../helpers/user-validation'
@@ -26,5 +25,5 @@ exports.signup = (req, res) =>{
     const userId = {id: user.id}
     const token = jwt.sign(userId, 'YOU_OWN_YOUR_OWN', {expiresIn : '24h'})
     // console.log(token)
-    return res.status(201).json({ status: 201, token: token, data: _.pick(user, ['id', 'firstName', 'lastName', 'email']) })
+    return res.status(201).json({ status: 201, message: "Registered successfully", data:{ token: token, id: user.id, firstName: user.firstName, lastName: user.lastName, email: user.email} })
 }
