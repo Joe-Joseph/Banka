@@ -19,7 +19,9 @@ header{
     z-index: 2;
 }
 header h1{
-    color: white
+    color: white;
+    outline: none;
+    border: none;
 }
 header nav{
     float: right;
@@ -40,13 +42,13 @@ ul{
 
 header ul li{
     display: inline;
-    padding: 0 10px 0 10px
+    padding: 0 5px 0 5px;
 }
 
 header ul li a{
     text-decoration: none;
     color: #d2cece;
-    font-size: 18px;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -167,7 +169,7 @@ section button:hover{
     border-top-right-radius: 5px;
     color: whitesmoke;
     text-align: center;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .allForm .inputBox{
@@ -175,11 +177,11 @@ section button:hover{
 }
 
 .allForm .inputBox input{
-    width: 77%;
+    width: 82%;
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 15px;
-    padding: 15px 20px;
+    padding: 15px 4px;
     border-radius: 5px;
     font-size: 18px;
     font-family: 'Courier New', Courier, monospace;
@@ -193,7 +195,7 @@ section button:hover{
    }
 
 .allForm .inputBox select{
-    width: 86%;
+    width: 85%;
     margin-left: 30px;
     margin-top: 15px;
     padding: 15px 20px;
@@ -204,7 +206,7 @@ section button:hover{
     margin-bottom: 7px;
     outline: none;
     border: 1px solid grey;
-    background-color: transparent
+    background-color: transparent;
    }  
 
 .allForm .inputBox label{
@@ -272,7 +274,7 @@ section button:hover{
     margin-top: 10px;
     z-index: 0;
     margin-left: 140px;
-    box-shadow: 0 5px 15px #262fadad;
+    box-shadow: 0 5px 15px #340b3c;
     padding-bottom: 20px;
 }
 .table-responsive thead{
@@ -297,7 +299,7 @@ table{
     text-align: center;
     width: 40%;
     color: white;
-    box-shadow: 5px 5px 15px #262fadad;
+    box-shadow: 5px 5px 15px #270c46;
 }
 
 #edit-pro-img button{
