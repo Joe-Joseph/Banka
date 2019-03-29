@@ -349,14 +349,6 @@ table{
     color: white;
 }
 
-#operationd:hover{
-    font-weight: normal;
-}
-
-.operation:hover{
-    font-weight: normal;
-}
-
 .view a{
     display: block;
     text-decoration: none;
