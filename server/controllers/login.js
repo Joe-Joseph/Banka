@@ -20,7 +20,7 @@ exports.login = (req, res) =>{
 
     //Generate token
     const generate = { id: user.id }
-    const token = jwt.sign(generate, 'YOU_OWN_YOUR_OWN', { expiresIn: '24' })
+    const token = jwt.sign(generate, 'YOU_OWN_YOUR_OWN', { expiresIn: '24h' })
     return res.status(200).json({ status: 200, message: "Logged in successfully ", data:{ token: token, id: user.id, firstName: user.firstName, lastName: user.lastName, email: user.email}})
 
 }
