@@ -13,5 +13,6 @@ router.post('/accounts', auth, accountCtrl.createAccount)
 router.patch('/accounts/:accountNumber', auth, accountCtrl.updateAccount)
 router.delete('/accounts/:accountNumber', auth, accountCtrl.deleteAccount)
 router.post('/accounts/:accountNumber/debit', auth, transactionCtrl.debitAccount)
+router.post('/accounts/:accountNumber/credit', auth, transactionCtrl.creditAccount)
 
 export default router
