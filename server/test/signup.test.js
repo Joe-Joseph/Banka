@@ -17,6 +17,9 @@ describe('Signup', () =>{
         })
         .end((err, res) => {
             expect(res.body.status).to.be.equal(400)
+            expect(res.body).to.have.property('error')
+            expect(res.body).to.have.property('status')
+            expect(res.body).to.be.an('object')
         })
     })
     
