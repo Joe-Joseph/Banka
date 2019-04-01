@@ -1,3 +1,4 @@
+import moment from 'moment'
 import transactions from '../model/transaction'
 import accounts from '../model/account'
 import validate from '../helpers/transaction-validation'
@@ -23,6 +24,7 @@ exports.debitAccount = (req, res) =>{
         amount : req.body.amount,
         cashier : req.body.cashier, 
         transactionType : "debit",
+        createdOn : moment().format('LL'),
         accountBalance : accountBalance
     }
     // Update account balance 
@@ -37,7 +39,7 @@ exports.creditAccount = (req, res) =>{
     if(error) return res.status(400).json({ status: 400, error: error.details[0].message })
 
     let accountNmb = req.params.accountNumber
-    console.log(req.params.accountNumber)
+    // console.log(req.params.accountNumber)
     let account = accounts.find(acc => acc.accountNumber === parseInt(accountNmb))
     if(!account) return res.status(404).json({ status: 404, error: "Account with the given account number not found" })
 
