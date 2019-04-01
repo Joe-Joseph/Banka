@@ -16,7 +16,8 @@ exports.createAccount = (req, res) =>{
         lastName : req.body.lastName,
         email : req.body.email,
         type : req.body.type,
-        openingBalance : req.body.openingBalance
+        openingBalance : req.body.openingBalance,
+        status: req.body.status || "activate"
     }
 
     accounts.push(account)
@@ -25,23 +26,25 @@ exports.createAccount = (req, res) =>{
 
 // UPDATE ACCOUNT
 exports.updateAccount = (req, res) =>{
-    // Find account with a given id
-    let account = accounts.find(acc => acc.id === parseInt(req.params.id))
-    if(!account) return res.status(404).json({ status:404, error: "Account with the given id is not found"})
+    // Find account with a given account number
+    let account = accounts.find(acc => acc.accountNumber === parseInt(req.params.accountNumber))
+    // console.log(account)
+    if(!account) return res.status(404).json({ status:404, error: "Account with the given account number is not found"})
 
-    const { error } = validate.validateAccount(req.body)
-    if(error) return res.status(400).json({ status: 400, error: error.dtails[0].message })
+    const { error } = validate.validateUpdate(req.body)
+    if(error) return res.status(400).json({ status: 400, error: error.details[0].message })
 
-    account.accountNumber = req.body.accountNumber
+    account.status = req.body.status
     return res.status(200).json({ status: 200, message: "Updated successfully", data: account })
 }
 
 // DELETE ACCOUNT
 exports.deleteAccount = (req, res) =>{
-    // Find account with a given ID
-    let account = accounts.fill(acc => acc.id === parseInt(req.params.id))
-    if(!account) return res.status(404).json({ status: 404, error: "Account with the given ID is not found" })
-
+    // Find account with a given account number
+    let account = accounts.find(acc => acc.accountNumber === parseInt(req.params.accountNumber))
+    console.log(account)
+    if(!account) return res.status(404).json({ status: 404, error: "Account with the given account number is not found" })
+    
     const index = accounts.indexOf(account)
     accounts.splice(index)
 
