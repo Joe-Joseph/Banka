@@ -1,3 +1,4 @@
+import moment from 'moment'
 import validate from '../helpers/account-validation'
 import accounts from '../model/account'
 
@@ -17,7 +18,8 @@ exports.createAccount = (req, res) =>{
         email : req.body.email,
         type : req.body.type,
         openingBalance : req.body.openingBalance,
-        status: req.body.status || "activate"
+        status: req.body.status || "activate",
+        createdOn : moment().format('LL')
     }
 
     accounts.push(account)
