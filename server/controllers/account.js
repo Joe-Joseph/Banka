@@ -44,7 +44,7 @@ exports.updateAccount = (req, res) =>{
 exports.deleteAccount = (req, res) =>{
     // Find account with a given account number
     let account = accounts.find(acc => acc.accountNumber === parseInt(req.params.accountNumber))
-    console.log(account)
+    //console.log(account)
     if(!account) return res.status(404).json({ status: 404, error: "Account with the given account number is not found" })
     
     const index = accounts.indexOf(account)
