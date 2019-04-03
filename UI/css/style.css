@@ -37,7 +37,7 @@ header nav{
 
 ul{
     padding-top: 30px;
-    margin: 0
+    margin: 10px;
 }
 
 header ul li{
@@ -143,7 +143,7 @@ section button:hover{
 /*Sign up*/
 
 .signup{
-    background: linear-gradient(rgba(23, 2, 143, 0.9), rgba(36, 2, 139, 0.9));
+    background-color: white;
     background-size: cover;
     position: absolute;
     color: white;
@@ -157,13 +157,14 @@ section button:hover{
     position: absolute;
     right: 420px;
     top: 40px;
-    width: 35%;
+    width: 30%;
     background: white;
+    box-shadow: 0 4px 4px #ccc;
     border-radius: 8px;
 }
 .allForm h2{
-    background-color: #061161;
-    margin-top:0;
+    background-color: #3c0935;
+    margin-top: 0;
     padding: 10px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -185,7 +186,7 @@ section button:hover{
     border-radius: 5px;
     font-size: 18px;
     font-family: 'Courier New', Courier, monospace;
-    color: #061161;
+    color: #f16b0a;
     margin-bottom: 7px;
     outline: none;
     border: none;
@@ -214,7 +215,7 @@ section button:hover{
     left: 30px;
     top: 0;
     padding: 15px 0;
-    font-size: 20px;
+    font-size: 18px;
     color: #061161;
     pointer-events: none;
     transition: .6s;
@@ -226,7 +227,7 @@ section button:hover{
 {
     top: -12px;
     left: 30px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .allForm input[type="submit"]{
@@ -253,7 +254,7 @@ section button:hover{
 /*Sign in page*/
 
 .signin{
-    background: linear-gradient(rgba(23, 2, 143, 0.9), rgba(36, 2, 139, 0.9));
+    background-color: white;
     background-size: cover;
     position: absolute;
     color: white;
@@ -281,8 +282,8 @@ section button:hover{
     border-bottom: 1px solid #ddd;
 }
 table th, table td {
-    padding: 20px;
-    color: white;
+    padding: 13px 20px;
+    color: #020202;
     font-size: 16px;
     border-bottom: 1px solid #ddd;
     text-align: center;
@@ -293,13 +294,14 @@ table{
 
 /*Profile page*/
 .profile {
+    background-color: #45092f;
     position: absolute;
     top: 70px;
     left: 355px;
     text-align: center;
     width: 40%;
     color: white;
-    box-shadow: 5px 5px 15px #270c46;
+    box-shadow: 0 4px 15px #3e0228;
 }
 
 #edit-pro-img button{
@@ -317,20 +319,20 @@ table{
 
 /*Admin page*/
 .table-users{
-    width: 90%;
+    width: 77%;
     margin-top: 10px;
     z-index: 0;
-    margin-left: 60px;
-    box-shadow: 0 5px 15px #290d46;
+    margin-left: 143px;
+    box-shadow: 0 5px 15px #ccc;
     padding-bottom: 20px;
 }
 
 .table-transactions{
-    width: 83%;
+    width: 78%;
     margin-top: 10px;
     z-index: 0;
-    margin-left: 100px;
-    box-shadow: 0 5px 15px #290d46;
+    margin-left: 140px;
+    box-shadow: 0 5px 15px #ccc;
     padding-bottom: 20px
 }
 
@@ -338,28 +340,24 @@ table{
     margin-left: 10px;
 }
 #operation{
+    background-image: linear-gradient(-90deg, #061161, #780206);
     font-size: 12px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    display: inline;
-    background: #061161;
-    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .view a{
     display: block;
     text-decoration: none;
-    color: white;
+    color: #0a0a0a;
 }
 
 .view{
     cursor: pointer;
 }
 .view:hover{
-    background:#262fadad;
+    background:rgb(245, 241, 241);
 }
 
 .trashEmail{
@@ -407,6 +405,11 @@ table{
         display: none;
     }
 
+    #welcome {
+        padding-top: 80px;
+        padding-left: 20px;
+    }
+
     .avatar{
         display: none;
     }
@@ -414,7 +417,6 @@ table{
     .navbar {
         display: block;
         background:#061161;
-        width: 45%;
         height: 100%;
         position: fixed;
         z-index: 1;
@@ -437,7 +439,7 @@ table{
 
     .navbar ul{
         margin-top: 60px;
-        margin-left: 20px;
+        margin-left: 0px;
     }
     .navbar a{
         text-decoration: none;
@@ -467,8 +469,8 @@ table{
         left: 0;
         border-radius: 0;
         width: 100%;
-        top:0;
-        bottom: 0
+        top: 0;
+        box-shadow: 0 2px 2px #d6d2d2;
     }
     .signup{
         min-height: 88%;
@@ -481,6 +483,9 @@ table{
     /*Sign-in page*/
     .signin{
         min-height: 88%;
+        margin-top: 70px;
+        margin-left: 5px;
+        width: 96%;
         overflow: hidden;
     }
     #signin{
@@ -499,10 +504,17 @@ table{
     /*Profile page*/
     .profile {
         position: absolute;
-        top: 5px;
-        left: 13px;
+        top: 75px;
+        left: 11px;
         text-align: center;
-        width: 95%;
+        width: 93%;
+    }
+
+    .pro-image {
+        width: 25%;
+        margin-top: 20px;
+        margin-left: 113px;
+        margin-bottom: 20px;
     }
 
     /*Admin page*/
