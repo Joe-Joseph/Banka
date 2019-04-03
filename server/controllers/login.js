@@ -19,8 +19,13 @@ exports.login = (req, res) =>{
     if(!compare) return res.status(400).json({ status: 400, error: "Incorrect password" })
 
     //Generate token
-    const generate = { id: user.id }
+    const generate = { 
+        id: user.id,
+        firstName : user.firstName,
+        lastName : user.lastName,
+        email : user.email,
+     }
     const token = jwt.sign(generate, 'YOU_OWN_YOUR_OWN', { expiresIn: '24h' })
-    return res.status(200).json({ status: 200, message: "Logged in successfully ", data:{ token: token, id: user.id, firstName: user.firstName, lastName: user.lastName, email: user.email}})
+    return res.header('Authorization', `${token}`).status(200).json({ status: 200, message: "Logged in successfully ", data:{ token: token, id: user.id, firstName: user.firstName, lastName: user.lastName, email: user.email}})
 
 }

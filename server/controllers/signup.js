@@ -22,8 +22,13 @@ exports.signup = (req, res) =>{
 
     users.push(user)
     // console.log(user.id)
-    const userId = {id: user.id}
-    const token = jwt.sign(userId, 'YOU_OWN_YOUR_OWN', {expiresIn : '24h'})
+    const generate = {
+        id: user.id,
+        firstName : user.firstName,
+        lastName : user.lastName,
+        email : user.email,
+    }
+    const token = jwt.sign(generate, 'YOU_OWN_YOUR_OWN', {expiresIn : '24h'})
     // console.log(token)
-    return res.status(201).json({ status: 201, message: "Registered successfully", data:{ token: token, id: user.id, firstName: user.firstName, lastName: user.lastName, email: user.email} })
+    return res.header('Authorization',token).status(201).json({ status: 201, message: "Registered successfully", data:{ token: token, id: user.id, firstName: user.firstName, lastName: user.lastName, email: user.email} })
 }
