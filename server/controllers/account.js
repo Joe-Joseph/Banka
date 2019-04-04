@@ -1,4 +1,5 @@
 import moment from 'moment'
+import jwt from 'jsonwebtoken'
 import validate from '../helpers/account-validation'
 import accounts from '../model/account'
 
@@ -9,21 +10,22 @@ exports.createAccount = (req, res) =>{
 
     let account =  accounts.find(accountNmb => accountNmb.accountNumber === req.body.accountNumber)
     if(account) return res.status(400).json({ status: 400, error: "Account number already taken"})
-
+    
+    console.log(req.user)
     account = {
         id: accounts.length + 1,
         accountNumber : req.body.accountNumber,
-        firstName : req.body.firstName,
-        lastName : req.body.lastName,
-        email : req.body.email,
+        firstName : req.user.firstName,
+        lastName : req.user.lastName,
+        email : req.user.email,
         type : req.body.type,
         openingBalance : req.body.openingBalance,
         status: req.body.status || "activate",
         createdOn : moment().format('LL')
     }
-
+    let token = jwt.sign(req.user, 'YOU_OWN_YOUR_OWN')
     accounts.push(account)
-    return res.status(201).json({ status: 201, message: "Account created successfully", data: account})
+    return res.header('Authorization', `${token}`).status(201).json({ status: 201, message: "Account created successfully", data: account})
 }
 
 // UPDATE ACCOUNT
@@ -44,7 +46,7 @@ exports.updateAccount = (req, res) =>{
 exports.deleteAccount = (req, res) =>{
     // Find account with a given account number
     let account = accounts.find(acc => acc.accountNumber === parseInt(req.params.accountNumber))
-    console.log(account)
+    //console.log(account)
     if(!account) return res.status(404).json({ status: 404, error: "Account with the given account number is not found" })
     
     const index = accounts.indexOf(account)
