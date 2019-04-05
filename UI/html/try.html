@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Banka</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <div class="container">
+            <div id="logo">
+                <a href="index.html"><h1>Banka</h1></a>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="./html/signup.html">Signup</a></li>
+                    <li><a href="./html/signin.html">Signin</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu">
+                <img src="../assets/icons/menu.svg" alt="Menu">
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <!--Side nav for the small screen-->
+        <div class="navbar">
+            <ul> 
+                <div class="close">X</div>
+
+                    <a href="./html/signin.html">
+                        <div class="admin-nav-side">
+                            Sign in
+                        </div>
+                    </a>
+                
+                
+                    <a href="./html/signup.html">
+                        <div class="admin-nav-side">
+                            Sign up
+                        </div>
+                    </a> 
+            </ul>
+        </div>
+        <!--Welcome and into to banka-->
+        <div class="intro">
+           
+            <div class="allForm">
+                <h2>Signup to Banka</h2>
+                <form action="profile.html">
+                    <div class="inputBox">            
+                        <input autocomplete="off" type="text" name="firstName" required>
+                        <label for="firstName">First Name</label>
+                    </div>
+                    
+                    <div class="inputBox">                   
+                        <input autocomplete="off" type="text" name="lastName" required>
+                        <label for="lastName">Last Name</label>
+                    </div>
+                    
+                    <div class="inputBox">
+                        <input autocomplete="off" type="email" name="email"  required>
+                        <label for="email">Email</label>
+                    </div>
+                    
+                    <div class="inputBox">          
+                        <input autocomplete="off" type="password" name="password" required>
+                        <label for="password">Password</label>
+                    </div>
+    
+                    <div class="inputBox">          
+                        <input autocomplete="off" type="password" name="password" required>
+                        <label for="password">Confirm-Password</label>
+                    </div>
+                    
+                    
+                    <input type="submit" name="submit" id="submitButton" value="Signup"></a>
+                </form>
+            </div>
+        </div> 
+       
+
+        <div class="right-side">
+            <div id="photo">
+                <img src="../assets/img/computer-female-laptop-1181209.jpg" alt="Happy">
+            </div>
+        </div> 
+        
+    </section>
+    <script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "name": "banka",
+  "version": "1.0.0",
+  "description": "Banka",
+  "main": "app.js",
+  "scripts": {
+    "test": "nyc --reporter=text --reporter=lcov mocha --require @babel/register server/test/**/*.test.js --exit",
+    "start": "nodemon --exec babel-node server/app",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joe-Joseph/Banka.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joe-Joseph/Banka/issues"
+  },
+  "homepage": "https://github.com/Joe-Joseph/Banka#readme",
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/register": "^7.4.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "nodemon": "^1.18.10"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "coveralls": "^3.0.3",
+    "mocha": "^6.0.2",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^13.3.0"
+  }
+}
