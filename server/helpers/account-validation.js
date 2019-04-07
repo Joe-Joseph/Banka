@@ -5,7 +5,7 @@ exports.validateAccount = (account) =>{
         accountNumber : joi.number(),
         type : joi.string().valid('saving', 'current'),
         openingBalance : joi.number(),
-        status: joi.string().valid('activate', 'dormant')
+        status: joi.string().valid('draft', 'activate', 'dormant')
     }
 
     return joi.validate(account, accountSchema)
