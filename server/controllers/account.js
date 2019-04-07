@@ -34,7 +34,7 @@ deleteAccount (req, res) {
     if(!account) return res.status(404).json({ status: 404, error: "Account with the given account number is not found" })
     
     const index = AccountsModel.accounts.indexOf(account)
-    AccountsModel.accounts.splice(index)
+    AccountsModel.accounts.splice(index, 1)
 
     return res.status(200).json({ status: 200, message: "Account successfulluy deleted"})
 },
