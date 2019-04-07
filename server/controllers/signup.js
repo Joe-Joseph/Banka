@@ -1,27 +1,19 @@
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import validate from '../helpers/user-validation'
-import users from '../model/user'
+import UsersModel from '../model/user'
 
-exports.signup = (req, res) =>{
+const Users = {
+    signup(req, res) {
     // Validate user inputs
     const { error } = validate.validateUser(req.body)
     if(error) return res.status(400).json({ status: 400, error: error.details[0].message })
 
     // Check whether the entered email does not exist
-    let user = users.find(username => username.email === req.body.email)
+    let user = UsersModel.users.find(username => username.email === req.body.email)
     if(user) return res.status(400).json({ status: 400, error: "Email already registered" })
 
-    user = {
-        id: users.length + 1,
-        firstName : req.body.firstName,
-        lastName : req.body.lastName,
-        email : req.body.email,
-        password : bcrypt.hashSync(req.body.password) 
-    }
-
-    users.push(user)
-    // console.log(user.id)
+    user = UsersModel.signup(req.body)
     const generate = {
         id: user.id,
         firstName : user.firstName,
@@ -30,5 +22,34 @@ exports.signup = (req, res) =>{
     }
     const token = jwt.sign(generate, 'YOU_OWN_YOUR_OWN', {expiresIn : '24h'})
     // console.log(token)
-    return res.header('Authorization',token).status(201).json({ status: 201, message: "Registered successfully", data:{ token: token, id: user.id, firstName: user.firstName, lastName: user.lastName, email: user.email} })
+    return res.header('Authorization', token).status(201).json({ status: 201, message: "Registered successfully", data:{ token: token, id: user.id, firstName: user.firstName, lastName: user.lastName, email: user.email} })
+  },
+
+  login(req, res) {
+    // Validating user inputs
+    const { error } = validate.validateLogin(req.body)
+    if(error) return res.status(400).json({ status: 400, error: error.details[0].message })
+
+    // Chech whether the entered email match the one in database
+    let user = UsersModel.users.find(username => username.email === req.body.email)
+    // console.log(user)
+    if(!user) return res.status(400).json({ status: 400, error: "Incorrect email" })
+
+    // Chech whether the entered password match the one in database
+    const compare = bcrypt.compareSync(req.body.password, user.password)
+    if(!compare) return res.status(400).json({ status: 400, error: "Incorrect password" })
+
+    //Generate token
+    const generate = { 
+        id: user.id,
+        firstName : user.firstName,
+        lastName : user.lastName,
+        email : user.email,
+     }
+    const token = jwt.sign(generate, 'YOU_OWN_YOUR_OWN', { expiresIn: '24h' })
+    return res.header('Authorization', `${token}`).status(200).json({ status: 200, message: "Logged in successfully ", data:{ token: token, id: user.id, firstName: user.firstName, lastName: user.lastName, email: user.email}})
+
+  },
+
 }
+export default Users

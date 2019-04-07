@@ -1,18 +1,18 @@
 import express from 'express'
-import signupCtrl from '../controllers/signup'
-import loginCtrl from '../controllers/login'
-import accountCtrl from '../controllers/account'
-import transactionCtrl from '../controllers/transactions'
+import Users from '../controllers/signup'
+import Accounts from '../controllers/account'
+import Transactions from '../controllers/transactions'
 import auth from '../middleware/auth'
 
 const router  = express.Router()
 
-router.post('/auth/signup', signupCtrl.signup)
-router.post('/auth/signin', loginCtrl.login)
-router.post('/accounts', auth, accountCtrl.createAccount)
-router.patch('/accounts/:accountNumber', auth, accountCtrl.updateAccount)
-router.delete('/accounts/:accountNumber', auth, accountCtrl.deleteAccount)
-router.post('/accounts/:accountNumber/debit', auth, transactionCtrl.debitAccount)
-router.post('/accounts/:accountNumber/credit', auth, transactionCtrl.creditAccount)
+router.post('/auth/signup', Users.signup)
+router.post('/auth/signin', Users.login)
+router.post('/accounts', auth, Accounts.createAccount)
+router.get('/accounts', auth, Accounts.getAllAccounts)
+router.patch('/accounts/:accountNumber', auth, Accounts.updateAccount)
+router.delete('/accounts/:accountNumber', auth, Accounts.deleteAccount)
+router.post('/accounts/:accountNumber/debit', auth, Transactions.debitAccount)
+router.post('/accounts/:accountNumber/credit', auth, Transactions.creditAccount)
 
 export default router
