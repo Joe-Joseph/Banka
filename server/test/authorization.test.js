@@ -65,6 +65,7 @@ describe('Signup', () =>{
         })
         
     })
+})
 
 describe("signin", () =>{
     it("User Signin", (done) => {
@@ -136,5 +137,4 @@ describe("signin", () =>{
         done();
     })
   })
-})
 })

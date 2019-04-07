@@ -2,9 +2,9 @@ import joi from 'joi'
 
 exports.validateAccount = (account) =>{
     const accountSchema = {
-        accountNumber : joi.number().min(5).required(),
+        accountNumber : joi.number(),
         type : joi.string().valid('saving', 'current'),
-        openingBalance : joi.number().required(),
+        openingBalance : joi.number(),
         status: joi.string().valid('activate', 'dormant')
     }
 

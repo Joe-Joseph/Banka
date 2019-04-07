@@ -1,38 +1,22 @@
-import moment from 'moment'
 import jwt from 'jsonwebtoken'
 import validate from '../helpers/account-validation'
-import accounts from '../model/account'
+import AccountsModel from '../model/account'
 
+const Accounts = {
 //  CREATE ACCOUNT
-exports.createAccount = (req, res) =>{
+  createAccount(req, res) {
     const { error } = validate.validateAccount(req.body)
     if(error) return res.status(400).json({ status: 400, error: error.details[0].message })
-
-    let account =  accounts.find(accountNmb => accountNmb.accountNumber === req.body.accountNumber)
-    if(account) return res.status(400).json({ status: 400, error: "Account number already taken"})
     
-    console.log(req.user)
-    account = {
-        id: accounts.length + 1,
-        accountNumber : req.body.accountNumber,
-        firstName : req.user.firstName,
-        lastName : req.user.lastName,
-        email : req.user.email,
-        type : req.body.type,
-        openingBalance : req.body.openingBalance,
-        status: req.body.status || "activate",
-        createdOn : moment().format('LL')
-    }
+    let account = AccountsModel.createAccount(req.body, req.user)
     let token = jwt.sign(req.user, 'YOU_OWN_YOUR_OWN')
-    accounts.push(account)
     return res.header('Authorization', `${token}`).status(201).json({ status: 201, message: "Account created successfully", data: account})
-}
+  },
 
 // UPDATE ACCOUNT
-exports.updateAccount = (req, res) =>{
+updateAccount(req, res) {
     // Find account with a given account number
-    let account = accounts.find(acc => acc.accountNumber === parseInt(req.params.accountNumber))
-    // console.log(account)
+    let account = AccountsModel.accounts.find(acc => acc.accountNumber === parseInt(req.params.accountNumber))
     if(!account) return res.status(404).json({ status:404, error: "Account with the given account number is not found"})
 
     const { error } = validate.validateUpdate(req.body)
@@ -40,17 +24,26 @@ exports.updateAccount = (req, res) =>{
 
     account.status = req.body.status
     return res.status(200).json({ status: 200, message: "Updated successfully", data: account })
-}
+  },
 
-// DELETE ACCOUNT
-exports.deleteAccount = (req, res) =>{
+  // DELETE ACCOUNT
+deleteAccount (req, res) {
     // Find account with a given account number
-    let account = accounts.find(acc => acc.accountNumber === parseInt(req.params.accountNumber))
+    let account = AccountsModel.accounts.find(acc => acc.accountNumber === parseInt(req.params.accountNumber))
     //console.log(account)
     if(!account) return res.status(404).json({ status: 404, error: "Account with the given account number is not found" })
     
-    const index = accounts.indexOf(account)
-    accounts.splice(index)
+    const index = AccountsModel.accounts.indexOf(account)
+    AccountsModel.accounts.splice(index)
 
     return res.status(200).json({ status: 200, message: "Account successfulluy deleted"})
+},
+
+getAllAccounts(req, res) {
+  if(!AccountsModel.accounts.length) return res.status(404).json({ status:404, message: "There is no account" })
+  res.status(200).json({ status: 200, data: AccountsModel.accounts })
 }
+
+}
+
+export default Accounts

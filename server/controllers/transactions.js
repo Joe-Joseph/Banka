@@ -29,7 +29,6 @@ exports.debitAccount = (req, res) =>{
     }
     // Update account balance 
     account.openingBalance = accountBalance
-    accounts.push(account)
     transactions.push(transaction)
     return res.status(201).json({ status: 201, data: transaction })
 }
@@ -55,7 +54,6 @@ exports.creditAccount = (req, res) =>{
     }
 
     account.openingBalance = accountBalance
-    accounts.push(account)
     transactions.push(transaction)
 
     return res.status(200).json({ status: 200, data: transaction})
