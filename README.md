@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/Joe-Joseph/Banka.svg?branch=server)](https://travis-ci.com/Joe-Joseph/Banka) [![Coverage Status](https://coveralls.io/repos/github/Joe-Joseph/Banka/badge.svg?branch=server)](https://coveralls.io/github/Joe-Joseph/Banka?branch=server)
+[![Build Status](https://travis-ci.com/Joe-Joseph/Banka.svg?branch=server)](https://travis-ci.com/Joe-Joseph/Banka) [![Coverage Status](https://coveralls.io/repos/github/Joe-Joseph/Banka/badge.svg?branch=server)](https://coveralls.io/github/Joe-Joseph/Banka?branch=server) [![Maintainability](https://api.codeclimate.com/v1/badges/c16e4658d5cef5b1e05f/maintainability)](https://codeclimate.com/github/Joe-Joseph/Banka/maintainability)
 # Banka
 **Banka** is a banking application that powers banking operations like account creation, customer deposit and withdrawals..
 
