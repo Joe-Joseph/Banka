@@ -33,28 +33,19 @@
         <div class="navbar">
             <ul> 
                 <div class="close">X</div>
-
-                    <a href="admin.html">
-                        <div class="admin-nav-side">
-                            Admin 
-                        </div>
-                    </a>
-
                 
-                    <a href="signIn.html">
+                    <a href="signin.html">
                         <div class="admin-nav-side">
                             Sign in
                         </div>
                     </a>
                 
-                
-                    <a href="index.html">
+                    <a href="signup.html">
                         <div class="admin-nav-side">
                             Sign up
                         </div>
                     </a>
-                
-                    
+                      
             </ul>
         </div>
         <!--Registration form-->
@@ -62,12 +53,12 @@
             <h2>Signup to Banka</h2>
             <form action="profile.html">
                 <div class="inputBox">            
-                    <input autocomplete="off" type="text" name="firstName" required>
+                    <input autocomplete="off" type="text" minlength="3" name="firstName" required>
                     <label for="firstName">First Name</label>
                 </div>
                 
                 <div class="inputBox">                   
-                    <input autocomplete="off" type="text" name="lastName" required>
+                    <input autocomplete="off" type="text" name="lastName" minlength="3" required>
                     <label for="lastName">Last Name</label>
                 </div>
                 
@@ -77,12 +68,12 @@
                 </div>
                 
                 <div class="inputBox">          
-                    <input autocomplete="off" type="password" name="password" required>
+                    <input autocomplete="off" type="password" name="password" minlength="6" required>
                     <label for="password">Password</label>
                 </div>
 
                 <div class="inputBox">          
-                    <input autocomplete="off" type="password" name="password" required>
+                    <input autocomplete="off" type="password" name="password" minlength="6" required>
                     <label for="password">Confirm-Password</label>
                 </div>
                 
