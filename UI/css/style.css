@@ -270,26 +270,27 @@ section button:hover{
 
 /*History transctions page*/
 /*Styling the table*/
-.table-responsive{
-    width: 35%;
+.table-responsive {
+    width: 77%;
     margin-top: 10px;
     z-index: 0;
-    margin-left: 400px;
-    box-shadow: 0 5px 15px #1f0e4d;
+    margin-left: 140px;
+    box-shadow: 0 5px 15px #abaaaf;
     padding-bottom: 20px;
 }
 .table-responsive thead{
     border-bottom: 1px solid #ddd;
 }
 table th, table td {
-    padding: 13px 20px;
+    padding: 10px 23px;
     color: #020202;
-    font-size: 16px;
+    font-size: 14px;
     border-bottom: 1px solid #ddd;
     text-align: center;
 }
 table{
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /*Profile page*/
@@ -319,19 +320,19 @@ table{
 
 /*Admin page*/
 .table-users{
-    width: 38%;
+    width: 65%;
     margin-top: 10px;
     z-index: 0;
-    margin-left: 350px;
+    margin-left: 210px;
     box-shadow: 0 5px 15px #ccc;
     padding-bottom: 20px;
 }
 
 .table-transactions{
-    width: 39%;
+    width: 72%;
     margin-top: 10px;
     z-index: 0;
-    margin-left: 350px;
+    margin-left: 200px;
     box-shadow: 0 5px 15px #ccc;
     padding-bottom: 20px;
 }
@@ -413,14 +414,14 @@ table{
       padding: 5px 28px;
       font-size: 12px;
       border-radius: 2px;
-      background: #c5070f;
+      background: #091160;
   }
 
   #popupBtnok{
-    padding: 5px 25px;
+    padding: 5px 28px;
     font-size: 12px;
     border-radius: 2px;
-    background: #091160;
+    background: #c5070f;
 }
 .transa{
     border-bottom: none;
@@ -606,8 +607,10 @@ table{
   .popup-content {
     width: 70%; 
   }
-    
 
+  .removeCol{
+      display: none;
+  }
 
 }
 
