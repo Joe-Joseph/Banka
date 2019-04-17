@@ -18,7 +18,7 @@ class Accounts {
       owner: payload.id,
       type: data.type,
       openingBalance: 0,
-      status: data.status || 'activate',
+      status: data.status || 'active',
       createdOn: moment().format('LL'),
     };
     this.accounts.push(newAccount);

@@ -5,6 +5,7 @@ import app from '../app';
 
 const { expect } = chai;
 chai.use(chaiHttp);
+
 const payload = {
   id: 1,
   firstName: 'joseph',
@@ -15,6 +16,14 @@ const payload = {
 const token = jwt.sign(payload, 'YOU_OWN_YOUR_OWN', { expiresIn: '24h' });
 
 before('User signup', (done) => {
+  chai.request(app)
+    .get('/api/v1/users')
+    .end((err, res) => {
+      expect(res.body.status).to.equal(404);
+      expect(res.body).to.have.property('status');
+      expect(res.body).to.have.property('error');
+      expect(res.body).to.be.an('object');
+    });
   const user = {
     firstName: 'joseph',
     lastName: 'joe',

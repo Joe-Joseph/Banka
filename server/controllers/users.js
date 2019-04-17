@@ -29,7 +29,10 @@ const Users = {
       message: 'Registered successfully',
       data: {
         token,
-        data: generate,
+        id: user.id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
       },
     });
   },
@@ -62,9 +65,17 @@ const Users = {
       message: 'Logged in successfully',
       data: {
         token,
-        generate,
+        id: generate.id,
+        firstName: generate.firstName,
+        lastName: generate.lastName,
+        email: generate.email,
       },
     });
+  },
+
+  getAllUsers(req, res) {
+    if (!UsersModel.users.length) return res.status(404).json({ status: 404, error: 'There is no user' });
+    return res.status(200).json({ status: 200, data: UsersModel.users });
   },
 
 };
