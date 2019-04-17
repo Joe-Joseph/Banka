@@ -40,11 +40,17 @@
  -------| -------- | -------------
  POST | /api/v1/auth/signup | Create user account
  POST | /api/v1/auth/login | User login
+ GET | /api/v1/users | Get all the users
+ GET | /api/v1/accounts | Get all the accounts
  POST | /api/v1/accounts | Create bank account
  PATCH | /api/v1/accounts/:accountNumber | Activate or desactivate bank account
  POST | /api/v1/accounts/:accountNumber/credit | Credit bank account
  POST | /api/v1/accounts/:accountNumber/debit | Debit bank account
  DELETE | /api/v1/accounts/:accountNumber | Delete bank accounts
+ 
+ **Video demo**
+ 
+https://youtu.be/linsVyg292E
  
 **Technology used**
 
