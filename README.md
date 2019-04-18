@@ -51,6 +51,10 @@
  **Video demo**
  
 https://youtu.be/linsVyg292E
+
+**This is my link to Heroku**
+
+https://banka-c-2.herokuapp.com
  
 **Technology used**
 
