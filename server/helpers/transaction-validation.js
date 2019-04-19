@@ -1,11 +1,11 @@
-import Joi from 'joi'
+import Joi from 'joi';
 
 
-exports.validateTransaction = (transaction) =>{
-    const transactionSchema = {
-        amount : Joi.number().required(),
-        cashier : Joi.number().required()
-    }
+exports.validateTransaction = (transaction) => {
+  const transactionSchema = {
+    amount: Joi.number().required(),
+    cashier: Joi.number().required(),
+  };
 
-    return Joi.validate(transaction, transactionSchema)
-}
+  return Joi.validate(transaction, transactionSchema);
+};
