@@ -5,6 +5,19 @@ import app from '../app';
 const { expect } = chai;
 chai.use(chaiHttp);
 
+describe('Get users', () => {
+  it('There is no user', () => {
+    chai.request(app)
+      .get('/api/v1/users')
+      .end((err, res) => {
+        expect(res.body.status).to.equal(200);
+        expect(res.body).to.have.property('status');
+        expect(res.body).to.have.property('data');
+        expect(res.body).to.be.an('object');
+      });
+  });
+});
+
 describe('Signup', () => {
   it('Allow user to signup', () => {
     chai.request(app)
