@@ -11,6 +11,8 @@ const payload = {
   lastName: 'Joe',
   email: 'joe1@gmail.com',
   password: '123456',
+  isAdmin: 'false',
+  type: 'cashier',
 };
 
 const token = jwt.sign(payload, 'YOU_OWN_YOUR_OWN', { expiresIn: '24h' });

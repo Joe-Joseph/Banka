@@ -15,6 +15,7 @@ class Accounts {
       firstName: payload.firstName,
       lastName: payload.lastName,
       email: payload.email,
+      owner: payload.id,
       type: data.type,
       openingBalance: 0,
       status: data.status || 'activate',

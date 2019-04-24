@@ -10,6 +10,8 @@ const payload = {
   firstName: 'joseph',
   lastName: 'joe',
   email: 'joe@gmail.com',
+  isAdmin: 'true',
+  type: 'admin',
 };
 
 const token = jwt.sign(payload, 'YOU_OWN_YOUR_OWN', { expiresIn: '24h' });

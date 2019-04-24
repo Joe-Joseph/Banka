@@ -19,7 +19,10 @@ const Users = {
       firstName: user.firstName,
       lastName: user.lastName,
       email: user.email,
+      isAdmin: user.isAdmin,
+      type: user.type,
     };
+
     const token = jwt.sign(generate, 'YOU_OWN_YOUR_OWN', { expiresIn: '24h' });
     return res.header('Authorization', token).status(201).json({
       status: 201,
@@ -50,6 +53,8 @@ const Users = {
       firstName: user.firstName,
       lastName: user.lastName,
       email: user.email,
+      isAdmin: user.isAdmin,
+      type: user.type,
     };
     const token = jwt.sign(generate, 'YOU_OWN_YOUR_OWN', { expiresIn: '24h' });
     return res.header('Authorization', `${token}`).status(200).json({

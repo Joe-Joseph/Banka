@@ -14,12 +14,31 @@ describe('Signup', () => {
         lastName: 'joe',
         email: 'joe@gmail.com',
         password: '123456',
+        isAdmin: 'true',
       })
       .end((err, res) => {
         expect(res.body.status).to.equal(201);
         expect(res.body).to.have.property('status');
         expect(res.body).to.have.property('message');
         expect(res.body).to.have.property('data');
+        expect(res.body).to.be.an('object');
+      });
+  });
+
+  it('isAdmin should be true or false', () => {
+    chai.request(app)
+      .post('/api/v1/auth/signup')
+      .send({
+        firstName: 'Joseph',
+        lastName: 'joe',
+        email: 'joe@gmail.com',
+        password: '123456',
+        isAdmin: 'ok',
+      })
+      .end((err, res) => {
+        expect(res.body.status).to.equal(400);
+        expect(res.body).to.have.property('status');
+        expect(res.body).to.have.property('error');
         expect(res.body).to.be.an('object');
       });
   });
