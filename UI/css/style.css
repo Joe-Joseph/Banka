@@ -318,6 +318,19 @@ table{
     margin-bottom: 20px
 }
 
+.pro-image-admin {
+    width: 25%;
+    margin-top: 20px;
+    margin-left: 178px;
+    margin-bottom: 20px;
+}
+
+.pro-image-staff {
+    width: 25%;
+    margin-top: 20px;
+    margin-left: 178px;
+    margin-bottom: 20px;
+}
 /*Admin page*/
 .table-users{
     width: 65%;
@@ -619,10 +632,17 @@ table{
     margin-bottom: 20px;
 }
 
- .pro-image {
+.pro-image-admin {
     width: 25%;
     margin-top: 20px;
-    margin-left: 108px;
+    margin-left: 110px;
+    margin-bottom: 20px;
+}
+
+.pro-image-staff {
+    width: 25%;
+    margin-top: 20px;
+    margin-left: 110px;
     margin-bottom: 20px;
 }
 
