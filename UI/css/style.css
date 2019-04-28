@@ -298,7 +298,7 @@ table{
     background-color: #45092f;
     position: absolute;
     top: 70px;
-    left: 355px;
+    left: 360px;
     text-align: center;
     width: 40%;
     color: white;
@@ -611,6 +611,27 @@ table{
   .removeCol{
       display: none;
   }
+
+  .pro-image {
+    width: 25%;
+    margin-top: 20px;
+    margin-left: 137px;
+    margin-bottom: 20px;
+}
+
+ .pro-image {
+    width: 25%;
+    margin-top: 20px;
+    margin-left: 108px;
+    margin-bottom: 20px;
+}
+
+.pro-image {
+    width: 25%;
+    margin-top: 20px;
+    margin-left: 110px;
+    margin-bottom: 20px;
+}
 
 }
 
