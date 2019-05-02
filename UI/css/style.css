@@ -271,10 +271,10 @@ section button:hover{
 /*History transctions page*/
 /*Styling the table*/
 .table-responsive {
-    width: 77%;
+    width: 85%;
     margin-top: 10px;
     z-index: 0;
-    margin-left: 140px;
+    margin-left: 5%;
     box-shadow: 0 5px 15px #abaaaf;
     padding-bottom: 20px;
 }
@@ -295,14 +295,14 @@ table{
 
 /*Profile page*/
 .profile {
-    background-color: #45092f;
+    background-color: #fffefe;
     position: absolute;
-    top: 70px;
-    left: 360px;
+    top: 48px;
+    left: 30%;
     text-align: center;
     width: 40%;
-    color: white;
-    box-shadow: 0 4px 15px #3e0228;
+    color: #060606;
+    box-shadow: 0 4px 15px #e4e0e3;
 }
 
 #edit-pro-img button{
@@ -314,7 +314,7 @@ table{
 .pro-image{
     width: 25%;
     margin-top: 20px;
-    margin-left: 183px;
+    margin-left: 37%;
     margin-bottom: 20px
 }
 
@@ -436,9 +436,9 @@ table{
     border-radius: 2px;
     background: #c5070f;
 }
-.transa{
+.transa {
     border-bottom: none;
-    color: white;
+    color: black;
     text-align: left;
     padding-right: 60px;
 }
@@ -536,14 +536,10 @@ table{
     }
 
     /*Sign-up page*/
-    .allForm{
-        position: absolute;
-        right: 0;
-        left: 0;
-        border-radius: 0;
-        width: 100%;
-        top: 0;
-        box-shadow: 0 2px 2px #d6d2d2;
+    .allForm {
+        top: 10px;
+        left: 25%;
+        width: 50%;
     }
     .signup{
         min-height: 88%;
@@ -566,19 +562,20 @@ table{
     }
 
     /*History transactions*/
-    .table-responsive{
-        width: 100%;
-        margin-left: 2px;
+    .table-responsive {
+        width: 50%;
+        margin-left: 25%;
         margin-right: 2px;
         overflow: auto;
-        z-index: 0; 
+        z-index: 0;
     }
 
     /*Profile page*/
     .profile {
         position: absolute;
-        top: 75px;
-        left: 11px;
+        top: 48px;
+        margin-left: -27%;
+        bottom: 10px;
         text-align: center;
         width: 93%;
     }
@@ -591,20 +588,17 @@ table{
     }
 
     /*Admin page*/
-    .table-users{
-        width: 100%;
+    .table-users {
+        width: 50%;
         margin-top: 5px;
         z-index: 0;
-        margin-left: 2px;
+        margin-left: 25%;
         overflow: auto;
     }
 
     .table-transactions{
-        width: 100%;
-        margin-top: 5px;
-        z-index: 0;
-        margin-left: 2px;
-        overflow: auto;
+        width: 50%;
+        margin-left: 25%;
     }
     
     #staff-users{
@@ -625,36 +619,71 @@ table{
       display: none;
   }
 
-  .pro-image {
-    width: 25%;
-    margin-top: 20px;
-    margin-left: 137px;
-    margin-bottom: 20px;
-}
-
 .pro-image-admin {
     width: 25%;
     margin-top: 20px;
-    margin-left: 110px;
+    margin-left: 37%;
     margin-bottom: 20px;
 }
 
 .pro-image-staff {
     width: 25%;
     margin-top: 20px;
-    margin-left: 110px;
+    margin-left: 37%;
     margin-bottom: 20px;
 }
 
 .pro-image {
     width: 25%;
     margin-top: 20px;
-    margin-left: 110px;
+    margin-left: 36%;
     margin-bottom: 20px;
 }
 
 }
 
+@media(min-width: 1024px){
+    .profile {
+        left: 31%;
+    }
 
+    .pro-image-admin {
+        margin-left: 37%;
+    }
+    .pro-image-staff {
+        margin-left: 37%;
+    }
 
+    .allForm {
+        right: 34%;
+    }
+}
 
+@media (max-width: 425px){
+.table-users {
+    width: 100%;
+    margin-top: 5px;
+    z-index: 0;
+    margin-left: 0px;
+    overflow: auto;
+}
+
+.allForm {
+    top: 10px;
+    left: 5%;
+    width: 90%;
+}
+
+.table-transactions{
+    width: 100%;
+    margin-top: 5px;
+    z-index: 0;
+    margin-left: 2px;
+    overflow: auto;
+}
+
+.table-responsive {
+    width: 100%;
+    margin-left: 2px;
+}
+}
