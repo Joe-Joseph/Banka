@@ -52,7 +52,7 @@
  
 https://youtu.be/linsVyg292E
 
-** User Interface **
+**User Interface**
 
 https://joe-joseph.github.io/Banka/UI/
 
